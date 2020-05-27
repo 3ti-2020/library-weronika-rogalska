@@ -1,3 +1,6 @@
-body {
-color: black;
+
+.moja_tabelka, th, td{
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 0.5rem;
 }
