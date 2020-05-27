@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 27 Maj 2020, 10:01
+-- Czas generowania: 27 Maj 2020, 10:17
 -- Wersja serwera: 10.4.6-MariaDB
 -- Wersja PHP: 7.3.9
 
@@ -76,20 +76,19 @@ INSERT INTO `book` (`id_book`, `id_autor`, `id_tytul`) VALUES
 
 CREATE TABLE `tytuly` (
   `id_tytul` int(11) NOT NULL,
-  `tytul` text DEFAULT NULL,
-  `ISBN` int(11) DEFAULT NULL
+  `tytul` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Zrzut danych tabeli `tytuly`
 --
 
-INSERT INTO `tytuly` (`id_tytul`, `tytul`, `ISBN`) VALUES
-(1, 'Drzewa', NULL),
-(2, 'Nicosc', NULL),
-(3, 'Fantastycznie', NULL),
-(4, 'Zbrodnia', NULL),
-(5, 'Lalka', NULL);
+INSERT INTO `tytuly` (`id_tytul`, `tytul`) VALUES
+(1, 'Drzewa'),
+(2, 'Nicosc'),
+(3, 'Fantastycznie'),
+(4, 'Zbrodnia'),
+(5, 'Lalka');
 
 --
 -- Indeksy dla zrzutów tabel
