@@ -68,59 +68,6 @@
     };
 
     echo("</table>");
-
-echo("<div class='tab'>");
-echo("<h1>Tabela autorzy:</h1>");
-echo("<h1>Tabela tytuły:</h1>");
-
-    $result4 = $conn -> query("SELECT * FROM autorzy");
-    echo("<div class='a'>");
-    echo("<table class='moja_tabelka'>");
-    echo("<tr>
-    <th>imie</th>
-    <th>nazwisko</th>
-    </tr>");
-
-    while($row = $result4 -> fetch_assoc()){
-        echo("<tr>");
-            echo("<td>".$row['imie']."</td>");
-            echo("<td>".$row['nazwisko']."</td>");
-            echo("<td>
-        <form action='delete.php' method='POST'>
-        <input style='display: none' name='id_to_delete' value=".$row['id_autor'].">
-        <input type='submit' value='delete'>
-        </form>
-        </td>");
-        echo("</tr>");
-    };
-
-    echo("</table>");
-    echo("</div>");
-
-
-    $result4 = $conn -> query("SELECT * FROM tytuly");
-    
-    echo("<div class='a'>");
-    echo("<table class='moja_tabelka'>");
-    echo("<tr>
-    <th>tytu</th>
-    </tr>");
-
-    while($row = $result4 -> fetch_assoc()){
-        echo("<tr>");
-            echo("<td>".$row['tytul']."</td>");
-            echo("<td>
-        <form action='delete.php' method='POST'>
-        <input style='display: none' name='id_to_delete' value=".$row['id_tytul'].">
-        <input type='submit' value='delete'>
-        </form>
-        </td>");
-        echo("</tr>");
-    };
-
-    echo("</table>");
-    echo("</div>");
-    echo("</div>");
 ?>
 </body>
 </html>
